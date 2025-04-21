@@ -1,7 +1,7 @@
 <template>
   <div>
-    <AppHeader/>
-    <AppPokemonContainer/>
+    <AppHeader @pokemonName="getPokemon"/>
+    <AppPokemonContainer :pokemonSearch="namePokemon"/>
     <AppFooter/>
   </div>
 </template>
@@ -17,6 +17,16 @@ export default {
     AppHeader,
     AppPokemonContainer,
     AppFooter
+  },
+  data(){
+    return {
+      namePokemon: '',
+    }
+  },
+  methods: {
+    getPokemon(name){
+      this.namePokemon = name
+    }
   }
 }
 </script>
@@ -25,7 +35,7 @@ export default {
   *{
     margin: 0;
     padding: 0;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'Quicksand', sans-serif;
     box-sizing: border-box;
   }
 </style>

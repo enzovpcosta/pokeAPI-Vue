@@ -5,7 +5,7 @@
             <img :src="src" :alt="alt">
         </div>
         <div class="search">
-            <input type="text" name="pokemon" id="pokemon" v-model="pokemon" placeholder="Digite o nome do pokémon">
+            <input type="text" name="pokemon" id="pokemon" v-model="pokemon" placeholder="Digite o nome do pokémon" @input="$emit('pokemonName', pokemon)">
         </div>
     </header>
 </template>
@@ -13,6 +13,7 @@
 <script>
 export default {
     name: "AppHeader",
+    emits: ["pokemonName"],
     data(){
         return {
             src: "img/masterball.png",
@@ -49,7 +50,7 @@ export default {
     }
 
     .search{
-        width: 20%;
+        width: 30%;
     }
 
     #pokemon{
@@ -60,6 +61,6 @@ export default {
 
     #pokemon:focus{
         outline-color: #bb86fc;
-        
+        caret-color: #bb86fc;
     }
 </style>

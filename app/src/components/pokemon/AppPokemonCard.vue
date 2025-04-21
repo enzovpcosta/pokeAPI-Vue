@@ -26,7 +26,9 @@
         flex-direction: column;
         justify-content: center;
         align-items: center;
+        border-left: 5px solid #bb86fc;
         box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.15);
+        padding: 5px 0;
     }
 
     .card-info{
@@ -36,7 +38,8 @@
         justify-content: center;
         gap: 5px;
         border-top: 3px solid black;
-        padding: 5px;
+        padding: 5px 0;
+        width: 80%;
     }
 
 </style>
