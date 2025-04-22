@@ -194,4 +194,26 @@
         box-shadow: 0 0 15px #bb86fc, 0 0 30px #bb86fc70;
     }
 
+    @media (max-width: 1100px){
+        .pokemon-container{
+            grid-template-columns: repeat(4, 1fr);
+        }
+    }
+    
+    @media (max-width: 850px){
+        .pokemon-container{
+            grid-template-columns: repeat(3, 1fr);
+            column-gap: 20px;
+            row-gap: 50px;
+        }
+    }
+
+    @media (max-width: 650px){
+        .pokemon-container{
+            padding: 30px 50px;
+            grid-template-columns: repeat(2, 1fr);
+            column-gap: 20px;
+            row-gap: 50px;
+        }
+    }
 </style>

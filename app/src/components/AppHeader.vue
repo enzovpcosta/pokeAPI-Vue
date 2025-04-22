@@ -31,7 +31,7 @@ export default {
         display: flex;
         justify-content: space-between;
         align-items: center;
-        height: 15vh;
+        min-height: 15vh;
     }
 
     .logo{
@@ -62,5 +62,31 @@ export default {
     #pokemon:focus{
         outline-color: #bb86fc;
         caret-color: #bb86fc;
+    }
+
+    @media (max-width: 850px){
+        .search{
+            width: 50%;
+        }
+
+        .logo{
+            gap: 15px;
+        }
+    }
+
+    @media (max-width: 650px){
+        header{
+            padding: 20px 50px;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .search{
+            width: 100%;
+        }
+
+        .logo{
+            gap: 15px;
+        }
     }
 </style>
